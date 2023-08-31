@@ -1,6 +1,13 @@
+package Arraylist;
 import java.util.ArrayList;
 public class Arraylistds{
 
+    public static void swap(ArrayList<Integer> list, int idx1,int idx2)
+    {
+       int temp=list.get(idx1);
+       list.set(idx1,list.get(idx2));
+       list.set(idx2,temp);
+    }
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
         // add operation
@@ -19,7 +26,13 @@ public class Arraylistds{
         // remove operation
 
         // list.remove(1);
-        list.set(0, 110);
+        // list.set(0, 110);
+        // System.out.println(list);
+
+        // swap two number
+        System.out.println(list);
+        int idx1=1, idx2=3;
+        swap(list,idx1,idx2);
         System.out.println(list);
 
     }
